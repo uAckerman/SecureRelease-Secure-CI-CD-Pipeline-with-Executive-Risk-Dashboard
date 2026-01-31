@@ -35,7 +35,7 @@ At this stage, we create a simple Flask-based web application that will act as o
 
 ***
 
-## Dockerize the App ( [Dockerfile](https://github.com/uAckerman/SecureRelease_Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/Dockerfile) )
+## Dockerize the App ( [Dockerfile](https://github.com/uAckerman/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/Dockerfile) )
 
 In this part, the Flask application is packaged into a Docker container so it can be run easily and consistently on any system. By running the app inside a container, deployment becomes simpler and more reliable. It removes dependency issues, keeps the environment consistent, and makes the application easier to move between systems.
 
