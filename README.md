@@ -1,0 +1,2 @@
+# SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard
+SecureRelease is a DevSecOps Risk Intelligence platform that embeds security into CI/CD Pipeline and converts technical vulnerabilities into business-level release risk. It integrates SAST, dependency, container, API, and cloud security with policy-driven release controls. Prometheus and Grafana expose real-time dashboards showing release safety.
