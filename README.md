@@ -18,7 +18,7 @@ SecureRelease is a DevSecOps Risk Intelligence platform that embeds security int
 
 # Workflow
 
-## Creat Flask Application ( [app.py](https://github.com/uAckerman/SecureRelease_Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/app.py) )
+## Creat Flask Application ( [app.py](https://github.com/uAckerman/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/app.py) )
 
 At this stage, we create a simple Flask-based web application that will act as our demo service for the SecureRelease pipeline. The focus is on:
 
