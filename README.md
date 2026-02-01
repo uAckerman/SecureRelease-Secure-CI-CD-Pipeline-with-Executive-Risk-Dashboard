@@ -83,9 +83,38 @@ After integrating security scanners into the CI/CD pipeline, the next step is to
 ### 1. Secrets Scanning — Gitleaks 
 Gitleaks scans the repository for hardcoded secrets, such as API keys, tokens, passwords, and credentials that should never be committed to source control.
 
+
+Vulnerable Code: 
+```
+GITHUB_TOKEN = "ghp_1234567890abcdef1234567890abcdef"
+```
 ***
 <img src="doc/screenshots/p9.png" alt="project" width="1500"> 
 
 ***
 
 Scanned Report can be found here : **[Gitleak Report](https://github.com/uAckerman/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/Reports/Gitleak.txt)**
+
+### 1. Static Code Analysis (SAST) — Semgrep 
+Semgrep performs static application security testing to identify insecure coding patterns and common vulnerabilities directly in source code.
+
+Vulnerable Code: 
+```
+@app.route("/user")
+def user():
+    name = request.args.get("name")
+    conn = get_db()
+    cur = conn.cursor()
+    query = f"SELECT * FROM users WHERE name = '{name}'"
+    cur.execute(query)
+    return str(cur.fetchall())
+
+app.run(host="0.0.0.0", port=5000)
+```
+
+***
+<img src="doc/screenshots/p8.png" alt="project" width="1500"> 
+
+***
+
+Scanned Report can be found here : **[Semgrep Report](https://github.com/uAckerman/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/Reports/Semgrep.txt)**
