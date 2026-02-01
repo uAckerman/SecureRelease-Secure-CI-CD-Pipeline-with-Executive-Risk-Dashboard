@@ -1,0 +1,53 @@
+Run gitleaks/gitleaks-action@v2
+  with:
+    args: detect --source . --verbose --redact
+[uAckerman] is an individual user. No license key is required.
+gitleaks version: 8.24.3
+Version to install: 8.24.3 (target directory: /tmp/gitleaks-8.24.3)
+Cache hit for: gitleaks-cache-8.24.3-linux-x64
+Received 1523153 of 5717457 (26.6%), 1.5 MBs/sec
+Received 5717457 of 5717457 (100.0%), 5.4 MBs/sec
+Cache Size: ~5 MB (5717457 B)
+/usr/bin/tar -xf /home/runner/work/_temp/5ad08ea5-76b5-4334-b237-3032faa4ea88/cache.tzst -P -C /home/runner/work/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard --use-compress-program unzstd
+Cache restored successfully
+Gitleaks restored from cache
+event type: push
+gitleaks cmd: gitleaks detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=-1
+/tmp/gitleaks-8.24.3/gitleaks detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=-1
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+1:48PM DBG using github.com/wasilibs/go-re2 regex engine
+1:48PM DBG no gitleaks config found in path .gitleaks.toml, using default gitleaks config
+1:48PM DBG executing: /usr/bin/git -C . log -p -U0 -1
+1:48PM DBG SCM platform parsed from host host=github.com platform=github
+Finding:     GITHUB_TOKEN = "REDACTED"
+Secret:      REDACTED
+RuleID:      generic-api-key
+Entropy:     4.281036
+File:        app.py
+Line:        7
+Commit:      7d50bb8f4d50d78a1b089ede724be1d715b1fb83
+Author:      Uzair Khan
+Email:       demo@gmail.com
+Date:        2026-02-01T13:48:32Z
+Fingerprint: 7d50bb8f4d50d78a1b089ede724be1d712f4fb83:app.py:generic-api-key:7
+Link:        https://github.com/uAckerman/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/7d50bb8f4d50d78a1b089ede724be1d712345fe/app.py#L7
+
+1:48PM INF 1 commits scanned.
+1:48PM DBG Note: this number might be smaller than expected due to commits with no additions
+1:48PM INF scanned ~5625 bytes (5.62 KB) in 154ms
+1:48PM WRN leaks found: 1
+Artifact name is valid!
+Root directory input is valid!
+Beginning upload of artifact content to blob storage
+Uploaded bytes 7336
+Finished uploading artifact content to blob storage!
+SHA256 digest of uploaded artifact zip is 86f83ef9e6aftdweb9c92140081c05671d1b8524d77f91742c4652c1685887b7
+Finalizing artifact upload
+Artifact gitleaks-results.sarif.zip successfully finalized. Artifact ID 5334121467
+Warning: 🛑 Leaks detected, see job summary for details
