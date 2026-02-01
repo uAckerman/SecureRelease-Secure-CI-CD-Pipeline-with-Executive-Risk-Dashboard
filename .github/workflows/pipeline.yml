@@ -9,9 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Gitleaks
+      uses: gitleaks/gitleaks-action@v2
+
     - name: Build Docker
       run: docker build -t secureapp .
 
-    - name: Gitleaks
-      uses: gitleaks/gitleaks-action@v2
+
 
