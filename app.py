@@ -13,5 +13,14 @@ def get_db():
 def home():
     return "SecureRelease Demo App"
 
+@app.route("/user")
+def user():
+    name = request.args.get("name")
+    conn = get_db()
+    cur = conn.cursor()
+    query = f"SELECT * FROM users WHERE name = '{name}'"
+    cur.execute(query)
+    return str(cur.fetchall())
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
