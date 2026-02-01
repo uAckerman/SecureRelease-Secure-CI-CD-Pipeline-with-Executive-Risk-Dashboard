@@ -76,3 +76,12 @@ Now I integrated automated security controls directly into the CI/CD pipeline to
 - Gitleaks (**Secrets Scan**)
 - Checkov (**IaC Scan**)
 - Trivy (**Container Scan**)
+
+## Validating Security Scanners via Vulnerable Code
+After integrating security scanners into the CI/CD pipeline, the next step is to **validate their effectiveness**. To do this, I intentionally introduced vulnerable patterns into the application (**app.py**) and pushed the changes to trigger the pipeline.
+
+### 1. Secrets Scanning — Gitleaks
+Gitleaks scans the repository for hardcoded secrets, such as API keys, tokens, passwords, and credentials that should never be committed to source control.
+
+> API_KEY = "HARDCODED_SECRET_123"
+
