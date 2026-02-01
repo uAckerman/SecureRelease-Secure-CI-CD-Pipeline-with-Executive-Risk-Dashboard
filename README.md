@@ -90,4 +90,4 @@ Gitleaks scans the repository for hardcoded secrets, such as API keys, tokens, p
 
 ***
 
-Scanned Report can be found here : [Gitleak Report]()
+Scanned Report can be found here : **[Gitleak Report](https://github.com/uAckerman/SecureRelease-Secure-CI-CD-Pipeline-with-Executive-Risk-Dashboard/blob/main/Reports/Gitleak.txt)**
