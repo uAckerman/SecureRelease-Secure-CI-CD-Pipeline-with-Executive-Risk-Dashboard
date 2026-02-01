@@ -83,8 +83,6 @@ After integrating security scanners into the CI/CD pipeline, the next step is to
 ### 1. Secrets Scanning — Gitleaks 
 Gitleaks scans the repository for hardcoded secrets, such as API keys, tokens, passwords, and credentials that should never be committed to source control.
 
-> GITHUB_TOKEN = "ghp_1234567890abcdef1234567890abcdef"
-
 ***
 <img src="doc/screenshots/p9.png" alt="project" width="1500"> 
 
