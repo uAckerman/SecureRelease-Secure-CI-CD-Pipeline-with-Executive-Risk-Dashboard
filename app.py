@@ -13,6 +13,7 @@ def get_db():
 def home():
     return "SecureRelease Demo App"
 
+# Added after pipeline setup to validate Semgrep
 @app.route("/user")
 def user():
     name = request.args.get("name")
