@@ -3,6 +3,9 @@ import sqlite3
 
 app = Flask(__name__)
 
+# Added after pipeline setup to validate Gitleaks
+API_KEY = "HARDCODED_SECRET_123"
+
 def get_db():
     return sqlite3.connect("users.db")
 
