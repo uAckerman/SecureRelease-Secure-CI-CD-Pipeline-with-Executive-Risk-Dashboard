@@ -21,6 +21,14 @@ jobs:
       env:
         SEMGREP_FAIL_ON: error
 
+    - name: OWASP Dependency Check
+      uses: dependency-check/Dependency-Check_Action@main
+      with:
+        project: "SecureRelease-Demo"
+        path: "."
+        format: "HTML"
+        failOnCVSS: 7
+
     - name: Build Docker
       run: docker build -t secureapp .
 
