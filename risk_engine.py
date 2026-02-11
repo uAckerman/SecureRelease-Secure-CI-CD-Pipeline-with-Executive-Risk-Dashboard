@@ -2,17 +2,31 @@ import json, glob, sys
 
 total = 0
 
-for file in glob.glob("**/*.json", recursive=True):
+print("Scanning JSON security reports...\n")
+
+for file in glob.glob("reports/**/*.json", recursive=True):
+    print("Reading:", file)
     try:
         with open(file) as f:
             data = json.load(f)
-            if "severity" in str(data):
-                total += 10
-    except:
-        pass
+            content = json.dumps(data)
 
-print("TOTAL_RISK:", total)
+            # simple demo logic
+            if "CRITICAL" in content:
+                total += 10
+            if "HIGH" in content:
+                total += 5
+            if "secret" in content.lower():
+                total += 10
+            if "sql" in content.lower():
+                total += 5
+    except Exception as e:
+        print("Skipping:", file, e)
+
+print("\nTOTAL_RISK:", total)
 
 if total > 20:
     print("BLOCK RELEASE")
     sys.exit(1)
+else:
+    print("ALLOW RELEASE")
