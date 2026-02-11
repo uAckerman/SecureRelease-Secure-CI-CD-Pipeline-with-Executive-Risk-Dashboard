@@ -4,7 +4,7 @@ total = 0
 
 print("Scanning JSON security reports...\n")
 
-for file in glob.glob("reports/**/*.json", recursive=True):
+for file in glob.glob("Reports/**/*.json", recursive=True):
     print("Reading:", file)
     try:
         with open(file) as f:
